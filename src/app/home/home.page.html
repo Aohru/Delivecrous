@@ -1,38 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title size="large">Chinese restaurant</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-card>
-    <img src=".\hotpot5">
-    <ion-card-header>
-      <ion-card-subtitle>HotPot</ion-card-subtitle>
-      <ion-card-title>Prix: 20€</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      La fondue chinoise, c'est bon !
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <img src=".\hotpot5">
-    <ion-card-header>
-      <ion-card-subtitle>HotPot</ion-card-subtitle>
-      <ion-card-title>Prix: 20€</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      La fondue chinoise, c'est bon !
-    </ion-card-content>
-  </ion-card>
+  <div *ngFor="let f of foods">
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <img src={{f.image}}>
+        <ion-card-header>
+          <ion-card-subtitle>{{f.nom}}</ion-card-subtitle>
+          <ion-card-title>Prix: {{f.prix}}€</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+        {{f.description}}
+        </ion-card-content>
+        <ion-button color="primary" expand="block" fill="outline" (click)="goToCommande()">Ajouter au panier</ion-button>
+      </ion-card>
+    </ion-col>
+    </ion-row>
+</div>
 
 
 </ion-content>
