@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FoodListService } from '../food-list.service';
 import { Food } from '../interfaces/food';
 
 @Component({
@@ -10,15 +11,17 @@ import { Food } from '../interfaces/food';
 export class HomePage  {
 
   foods: Array<Food> = new Array<Food>();
-  constructor(private router: Router){
+  constructor(private router: Router, private foodListService: FoodListService){
     this.foods.push({nom:'HotPot', prix:20, description:'La fondue chinoise,c est super bon !', image:'assets/icon/hotpot5.png'});
     this.foods.push({nom:'HotPot', prix:20, description:'La fondue chinoise,c est super bon !',image:'assets/icon/hotpot5.png'});
     this.foods.push({nom:'Blanquette de veau', prix:45, description:'La blanquette de veau,c est super bon !',image:'assets/icon/blanquette.jpg'});
   }
 
   goToCommande(){
-    this.router.navigate(['commande']);
+    this.router.navigate(['panier']);
   }
-
   
+  addToPanier(f){
+this.foodListService.addFood(f);
+  }
 }

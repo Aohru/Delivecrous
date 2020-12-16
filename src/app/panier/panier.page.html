@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>panier</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let f of foods">
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <img src={{f.image}}>
+          <ion-card-header>
+            <ion-card-subtitle>{{f.nom}}</ion-card-subtitle>
+            <ion-card-title>Prix: {{f.prix}}€</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+          {{f.description}}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      </ion-row>
+  </div>
+  <ion-text>Total {{prixTotal}}€ </ion-text>
+</ion-content>
+
