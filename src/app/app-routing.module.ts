@@ -15,7 +15,21 @@ const routes: Routes = [
   {
     path: 'panier',
     loadChildren: () => import('./panier/panier.module').then( m => m.PanierPageModule)
-  }
+  },
+  {
+    path: '',
+    redirectTo: 'panier',
+    pathMatch: 'full'
+  },
+  {
+    path: 'commande',
+    loadChildren: () => import('./commande/commande.module').then( m => m.CommandePageModule)
+  },
+  {
+    path: '',
+    redirectTo: 'commande',
+    pathMatch: 'full'
+  },
   
 ];
 

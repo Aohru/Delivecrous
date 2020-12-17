@@ -1,14 +1,14 @@
 <ion-header>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=2, user-scalable=no, width=device-width">
     <title>Delivecrous</title>
     <link href="https://cdn.staticfile.org/ionic/1.3.2/css/ionic.css" rel="stylesheet">
     <script src="https://cdn.staticfile.org/ionic/1.3.2/js/ionic.bundle.min.js"></script>
   </head>
   <ion-toolbar>
   <div class="bar bar-header bar-energized">
-    <button class="button icon-left ion-chevron-left ">back</button>
+    <button (click)="goToHome()" class="button icon-left ion-chevron-left ">back</button>
       <h1 class="title">Delivecrous</h1>
   </div>
   </ion-toolbar>
@@ -16,26 +16,25 @@
 
 
 <ion-content>
+  <div class="container">
+    <h1>Votre panier:</h1>
+  </div>
   <div *ngFor="let f of foods">
-    <ion-row>
-      <ion-col>
-        <ion-card>
-          <img src={{f.image}}>
-          <ion-card-header>
-            <ion-card-subtitle>{{f.nom}}</ion-card-subtitle>
-            <ion-card-title>Prix: {{f.prix}}€</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-          {{f.description}}
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      </ion-row>
+        <ion-list can-swipe="true">
+          <ion-item>
+            <ion-img src={{f.image}}></ion-img>
+            <ion-list-header>
+            <ion-label> {{f.nom}}</ion-label>
+              <ion-label>Prix: {{f.prix}}€</ion-label>
+            </ion-list-header>
+          </ion-item>
+        </ion-list>
   </div>
-  <ion-text>Total {{prixTotal}}€ </ion-text>
-  <div class="bar bar-header">
-    <ion-text> Votre Panier: </ion-text>
+  <div class="container">
+    <ion-text>Total: {{prixTotal}}€ </ion-text>
   </div>
+
+
 
   <div class="content has-header">
     <div class="list">
@@ -50,7 +49,7 @@
       </label>
     </div>
     <div class="padding">
-      <button class="button button-block button-positive">Passer commande</button>
+      <button (click)="goToCommande()" class="button button-block button-positive">Passer commande</button>
     </div>
   </div>
 </ion-content>

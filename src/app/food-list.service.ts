@@ -20,7 +20,6 @@ export class FoodListService {
     for (let f of this.foods) {
       this.prixTotal = this.prixTotal+f.prix;
       console.log(f.prix);
-      console.log(this.prixTotal);
     }
     //prixTotal = this.foods.reduce(function(a, b){ return a.prix + b.prix; })
     //prixTotal = this.foods.reduce((a,b) =>  a.prix + b.prix ? a:b);
