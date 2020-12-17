@@ -8,6 +8,9 @@
   color: #1f1f1f;
   text-align: left;
 }
+.container h3{
+  color: #9d9fa6;
+}
 .container ion-text{
   color: #1f1f1f;
   margin-right: 2cm;
@@ -33,5 +36,18 @@
   color: #1f1f1f;
   margin-right: 2cm;
   font-size: medium;
+}
 
+.ion-float-right{
+  color: #1f1f1f;
+  margin-right: 3cm;
+  font-size: large;
+  text-align: right;
+}
+.ion-text-wrap{
+  color: #1f1f1f;
+  margin-right: 1cm;
+  font-size: large;
+  text-align: left;
+  text-wrap: avoid;
 }

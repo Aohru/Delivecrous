@@ -15,7 +15,7 @@ export class HomePage  {
   constructor(private router: Router, private foodListService: FoodListService){
     this.foods.push({nom:'HotPot', prix:40, description:'La fondue chinoise pour 2 personnes,c’est super bon !', image:'assets/icon/hotpot5.png'});
     this.foods.push({nom:'Ecrevisse Epicee', prix:35, description:'La Ecrevisse Epicee,c’est super bon !',image:'assets/icon/Ecrevisse.jpg'});
-    this.foods.push({nom:'Pain farci cuit vapeur', prix:20, description:'Le pain farci cuit vapeur,c’est super bon !',image:'assets/icon/Vapeur.jpg'});
+    this.foods.push({nom:'Pain vapeur', prix:20, description:'Le pain farci cuit vapeur,c’est super bon !',image:'assets/icon/vapeur.png'});
     this.foods.push({nom:'Entree', prix:19, description:'La entree contient 7 plats accompagnement,c’est super bon !',image:'assets/icon/Entree.jpg'});
     this.foods.push({nom:'Blanquette de veau', prix:18, description:'La blanquette de veau,c’est super bon !',image:'assets/icon/blanquette.jpg'});
   }
