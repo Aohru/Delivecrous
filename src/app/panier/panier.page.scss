@@ -8,46 +8,36 @@
   color: #1f1f1f;
   text-align: left;
 }
+.container h2{
+  color: #1f1f1f;
+  text-align: left;
+  text-wrap: avoid;
+}
 .container h3{
   color: #9d9fa6;
 }
+
 .container ion-text{
-  color: #1f1f1f;
-  margin-right: 2cm;
-  font-size: large;
-  text-align: right;
-}
-.container ion-item{
-   width: auto;
-   height: 3cm;
+   color: #1f1f1f;
+   margin-right: 2cm;
+   font-size: large;
+   text-align: right;
  }
-.container h2{
-  color: #1f1f1f;
-  text-align: center;
-  text-wrap: avoid;
-}
 
-.container ion-img{
-  width: 2.5cm;
-  height: 1.5cm;
-
-}
 .container ion-label{
   color: #1f1f1f;
   margin-right: 2cm;
   font-size: medium;
 }
-
-.ion-float-right{
+.ion-margin-end{
   color: #1f1f1f;
-  margin-right: 3cm;
-  font-size: large;
   text-align: right;
-}
-.ion-text-wrap{
-  color: #1f1f1f;
   margin-right: 1cm;
-  font-size: large;
-  text-align: left;
-  text-wrap: avoid;
 }
+.ion-align-self-end{
+  color: #1f1f1f;
+  text-align: right;
+  margin-right: 2cm;
+  font-size: large;
+}
+

@@ -17,27 +17,49 @@
 
 <ion-content>
   <div class="container">
-    <h1>Votre panier:</h1>
+    <h2>Votre panier:</h2>
   </div>
   <div *ngFor="let f of foods">
-        <ion-list can-swipe="true">
-          <ion-item>
+        <ion-list>
+          <ion-item-sliding>
+            <ion-item>
+            <ion-thumbnail class="ion-margin-end">
             <ion-img src={{f.image}}></ion-img>
+            </ion-thumbnail>
             <ion-list-header>
-            <ion-label> {{f.nom}}</ion-label>
-              <ion-label>Prix: {{f.prix}}€</ion-label>
+            <ion-label class="ion-text-wrap"> {{f.nom}}</ion-label>
+              <ion-label class="ion-margin-end">Prix: {{f.prix}}€</ion-label>
             </ion-list-header>
-          </ion-item>
+            <ion-item-options side="end">
+              <ion-item-option>Supprimer</ion-item-option>
+            </ion-item-options>
+            </ion-item>
+          </ion-item-sliding>
         </ion-list>
   </div>
-  <div  class="ion-float-right">
+  <div  class="ion-align-self-end">
     <ion-text>Total: {{prixTotal}}€ </ion-text>
   </div>
-  <h3>------------------------------------------------------</h3>
-<div class="ion-text-wrap">
-  <h2>Votre adress: </h2>
-</div>
   <div class="content has-header">
+    <div  class="row">
+  <li class="item item-checkbox">
+    <label class="checkbox">
+      <input type="checkbox">
+    </label>
+    Carte bancaire
+  </li>
+  <li class="item item-checkbox">
+    <label class="checkbox">
+      <input type="checkbox">
+    </label>
+    Espèce
+  </li>
+    </div>
+  </div>
+  <div class="content has-header">
+<div  class="row">
+  <h3>Votre adress: </h3>
+</div>
     <div class="list">
       <label class="item item-input">
         <input type="text" placeholder="Rue">
