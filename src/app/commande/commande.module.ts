@@ -4,19 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PanierPageRoutingModule } from './panier-routing.module';
+import { CommandePageRoutingModule } from './commande-routing.module';
 
-import { PanierPage } from './panier.page';
-import { RouterModule } from '@angular/router';
+import { CommandePage } from './commande.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PanierPageRoutingModule,
-    RouterModule
+    CommandePageRoutingModule
   ],
-  declarations: [PanierPage]
+  declarations: [CommandePage]
 })
-export class PanierPageModule {}
+export class CommandePageModule {}

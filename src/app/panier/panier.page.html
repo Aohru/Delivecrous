@@ -1,26 +1,58 @@
 <ion-header>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=2, user-scalable=no, width=device-width">
+    <title>Delivecrous</title>
+    <link href="https://cdn.staticfile.org/ionic/1.3.2/css/ionic.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.org/ionic/1.3.2/js/ionic.bundle.min.js"></script>
+  </head>
   <ion-toolbar>
-    <ion-title>panier</ion-title>
+  <div class="bar bar-header bar-energized">
+    <button (click)="goToHome()" class="button icon-left ion-chevron-left ">back</button>
+      <h1 class="title">Delivecrous</h1>
+  </div>
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
-  <div *ngFor="let f of foods">
-    <ion-row>
-      <ion-col>
-        <ion-card>
-          <img src={{f.image}}>
-          <ion-card-header>
-            <ion-card-subtitle>{{f.nom}}</ion-card-subtitle>
-            <ion-card-title>Prix: {{f.prix}}€</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-          {{f.description}}
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      </ion-row>
+  <div class="container">
+    <h1>Votre panier:</h1>
   </div>
-  <ion-text>Total {{prixTotal}}€ </ion-text>
+  <div *ngFor="let f of foods">
+        <ion-list can-swipe="true">
+          <ion-item>
+            <ion-img src={{f.image}}></ion-img>
+            <ion-list-header>
+            <ion-label> {{f.nom}}</ion-label>
+              <ion-label>Prix: {{f.prix}}€</ion-label>
+            </ion-list-header>
+          </ion-item>
+          <ion-button color="primary" expand="block" fill="outline" (click)="delete(f)">Supprimer</ion-button>
+        </ion-list>
+  </div>
+  <div class="container">
+    <ion-text>Total: {{prixTotal}}€ </ion-text>
+  </div>
+
+
+
+  <div class="content has-header">
+    <div class="list">
+      <label class="item item-input">
+        <input type="text" placeholder="Rue">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Ville">
+      </label>
+      <label class="item item-input">
+        <textarea placeholder="Code postal"></textarea>
+      </label>
+    </div>
+    <div class="padding">
+      <button (click)="goToCommande()" class="button button-block button-positive">Passer commande</button>
+    </div>
+  </div>
 </ion-content>
+
 

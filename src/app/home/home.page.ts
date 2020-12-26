@@ -20,7 +20,7 @@ export class HomePage  {
     this.foods.push({nom:'Blanquette de veau', prix:18, description:'La blanquette de veau,c’est super bon !',image:'assets/icon/blanquette.jpg'});
   }
 
-  goToCommande(){
+  goToPanier(){
     this.router.navigate(['panier']);
   }
   
