@@ -28,6 +28,11 @@ export class PanierPage implements OnInit {
     this.routerToCommande.navigate(['commande']);
   }
 
+  delete(f){
+    this.foodList.delete(f);
+    this.prixTotal = this.foodList.getPrix();
+  }
+
 
   ngOnInit(){
   this.foods = this.foodList.getAll();

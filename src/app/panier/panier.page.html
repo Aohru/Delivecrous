@@ -30,11 +30,10 @@
             <ion-label class="ion-text-wrap"> {{f.nom}}</ion-label>
               <ion-label class="ion-margin-end">Prix: {{f.prix}}€</ion-label>
             </ion-list-header>
-            <ion-item-options side="end">
-              <ion-item-option>Supprimer</ion-item-option>
-            </ion-item-options>
+              <ion-button color="primary" expand="block" fill="outline" (click)="delete(f)">Supprimer</ion-button>
             </ion-item>
           </ion-item-sliding>
+
         </ion-list>
   </div>
   <div  class="ion-align-self-end">
