@@ -23,6 +23,11 @@ export class HomePage  {
   goToPanier(){
     this.router.navigate(['panier']);
   }
+
+  goToFoodDetail(f){
+    this.foodListService.setFoodDetail(f);
+    this.router.navigate(['food-detail']);
+  }
   
   addToPanier(f){
 this.foodListService.addFood(f);

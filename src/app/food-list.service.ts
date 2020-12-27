@@ -7,6 +7,7 @@ import { Food } from './interfaces/food';
 export class FoodListService {
 
   foods: Array<Food> = new Array<Food>();
+  foodDetail: Food;
   prixTotal: number ;
 
   constructor() {
@@ -14,6 +15,14 @@ export class FoodListService {
 
   getAll(): Array<Food>{
     return this.foods;
+  }
+
+  getFoodDetail(): Food{
+    return this.foodDetail;
+  }
+
+  setFoodDetail(f: Food){
+    this.foodDetail=f;
   }
 
   getPrix(): number{

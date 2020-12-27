@@ -30,7 +30,11 @@ const routes: Routes = [
     path: '',
     redirectTo: 'commande',
     pathMatch: 'full'
+  },  {
+    path: 'food-detail',
+    loadChildren: () => import('./food-detail/food-detail.module').then( m => m.FoodDetailPageModule)
   },
+
   
 ];
 

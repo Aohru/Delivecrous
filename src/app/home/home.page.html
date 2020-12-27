@@ -20,13 +20,13 @@
   <div *ngFor="let f of foods">
   <ion-row>
     <ion-col>
-      <ion-card>
-        <img src={{f.image}}>
-        <ion-card-header>
+      <ion-card >
+        <img src={{f.image}} (click)="goToFoodDetail(f)">
+        <ion-card-header (click)="goToFoodDetail(f)" >
           <ion-card-subtitle>{{f.nom}}</ion-card-subtitle>
           <ion-card-title>Prix: {{f.prix}}€</ion-card-title>
         </ion-card-header>
-        <ion-card-content>
+        <ion-card-content (click)="goToFoodDetail(f)">
         {{f.description}}
         </ion-card-content>
         <ion-button color="primary" expand="block" fill="outline" (click)="addToPanier(f)">Ajouter au panier</ion-button>
